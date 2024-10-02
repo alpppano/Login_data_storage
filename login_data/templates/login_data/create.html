@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>로그인 정보 추가하기</h1>
+    <form action="{% url "login_data:create" %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="추가하기">
+    </form>
+
+{% endblock content %}
+
+

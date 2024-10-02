@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url "login_data:create" %}">추가하기</a>
+    <h1>비밀번호 목록</h1>
+    {% for info in data %}
+        <li>
+            <a href="{% url "login_data:detail" info.pk %}">{{ info.url_name }}</a>
+        </li>
+    {% endfor %}
+
+{% endblock content %}

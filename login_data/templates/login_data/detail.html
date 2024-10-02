@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url "login_data:index" %}">홈으로</a>
+    <h1>상세 정보</h1>
+    <a href="{{ data.login_url }}" target="_blank">{{ data.url_name }}</a>
+    <p>아이디: {{ data.login_id }}</p>
+    <p>비밀번호: {{ data.url_name }}</p>
+    <hr>
+    <a href="{% url "login_data:update" data.pk %}">수정하기</a>
+    <a href="{% url "login_data:delete" data.pk %}">삭제하기</a>
+{% endblock content %}
+
+
