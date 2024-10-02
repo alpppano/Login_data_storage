@@ -1,1 +1,1 @@
-# password_generator
+# 로그인 데이터 관리
